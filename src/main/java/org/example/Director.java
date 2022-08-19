@@ -5,5 +5,4 @@ public record Director(String firstName, String lastName) {
     public String toString() {
         return firstName + " " + lastName;
     }
-
 }

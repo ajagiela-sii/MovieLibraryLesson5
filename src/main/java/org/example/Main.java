@@ -20,7 +20,6 @@ public class Main {
         int option = sc.nextInt();
         sc.nextLine();
 
-
         switch (option) {
             case 1 -> {
                 System.out.println("Enter two dates:");
@@ -34,7 +33,6 @@ public class Main {
                 String fullName = sc.nextLine();
                 movieLibrary.printMoviesName(movieLibrary.findMoviesWithActor(fullName.split(" ")[0], fullName.split(" ")[1]));
             }
-
         }
     }
 }

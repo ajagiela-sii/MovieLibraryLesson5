@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Movie {
     private String title;
     private int year;
-
     private String genre;
     private Director director;
     private ArrayList<Actor> actors;

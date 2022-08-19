@@ -24,7 +24,6 @@ public class Json {
             for (JsonNode jsonNode : node) {
                 Movie movie = objectMapper.treeToValue(jsonNode, Movie.class);
                 MovieLibrary.addMovieToLibrary(movie);
-
             }
         }
     }
