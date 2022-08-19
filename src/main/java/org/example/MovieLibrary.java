@@ -3,6 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Set;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class MovieLibrary {
@@ -18,16 +19,25 @@ public class MovieLibrary {
     }
 
     public Set<Movie> findMoviesReleasedBetweenXY(int yearX, int yearY) {
-
-        Set<Movie> movies = listOfMovies.stream()
-                .filter(movie -> (movie.getDate() > yearX && movie.getDate() < yearY))
+        return listOfMovies.stream()
+                .filter(movie -> (movie.getYear() > yearX && movie.getYear() < yearY))
                 .collect(Collectors.toSet());
-        return movies;
     }
 
-    public void printMoviesTitle(Set<Movie> moviesToPrinting) {
-        for (Movie movie : moviesToPrinting) {
-            System.out.println(movie.getTitle());
+    public void printMoviesName(Set<Movie> moviesToPrinting) {
+        if (!moviesToPrinting.isEmpty()) {
+            for (Movie movie : moviesToPrinting) {
+                System.out.println(movie.getName());
+            }
+        } else {
+            System.out.println("No movies to display");
         }
+    }
+
+    public Set<Movie> findMoviesWithActor(String firstName, String lastName) {
+        Predicate<Actor> actorActInMovie = actor -> (actor.getFirstName().equals(firstName) && actor.getLastName().equals(lastName));
+        return listOfMovies.stream()
+                .filter(movie -> movie.getActors().stream().anyMatch(actorActInMovie))
+                .collect(Collectors.toSet());
     }
 }

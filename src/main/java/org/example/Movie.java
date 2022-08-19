@@ -3,8 +3,10 @@ package org.example;
 import java.util.ArrayList;
 
 public class Movie {
+    private String name;
     private String title;
-    private int date;
+    private int year;
+
     private String genre;
     private Director director;
     private ArrayList<Actor> actors;
@@ -14,18 +16,26 @@ public class Movie {
 
     public Movie(String title, int date, String genre, Director director, ArrayList<Actor> actors) {
         this.title = title;
-        this.date = date;
+        this.year = date;
         this.director = director;
         this.genre = genre;
         this.actors = actors;
+    }
+
+    public void setName() {
+        this.name = this.title + " " + this.year;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public int getDate() {
-        return date;
+    public int getYear() {
+        return year;
     }
 
     public String getGenre() {
@@ -43,9 +53,9 @@ public class Movie {
     @Override
     public String toString() {
         return "tittle: " + title + '\n' +
-                "director: " + director + '\n' +
                 "genre: " + genre + '\n' +
-                "date: " + date + '\n' +
+                "year: " + year + '\n' +
+                "director: " + director + '\n' +
                 "actors: " + actors;
     }
 }

@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws IOException, URISyntaxException {
         MovieLibrary movieLibrary = new MovieLibrary();
         Json json = new Json();
-        json.readDataFromJSONFile();
+        json.readMoviesFromJSONFile();
 
         Scanner sc = new Scanner(System.in);
         System.out.println("---------------------------------- MOVIE LIBRARY ----------------------------------");
@@ -18,19 +18,23 @@ public class Main {
         System.out.println("-----------------------------------------------------------------------------------");
 
         int option = sc.nextInt();
+        sc.nextLine();
 
 
         switch (option) {
             case 1 -> {
-                System.out.println("Enter dates:");
+                System.out.println("Enter two dates:");
                 int yearX = sc.nextInt();
                 int yearY = sc.nextInt();
-                movieLibrary.printMoviesTitle(movieLibrary.findMoviesReleasedBetweenXY(yearX, yearY));
+                movieLibrary.printMoviesName(movieLibrary.findMoviesReleasedBetweenXY(yearX, yearY));
             }
             case 2 -> movieLibrary.printRandomMovieInfo();
-           //case 3 -> ;
+            case 3 -> {
+                System.out.println("Enter the full name of the actor:");
+                String fullName = sc.nextLine();
+                movieLibrary.printMoviesName(movieLibrary.findMoviesWithActor(fullName.split(" ")[0], fullName.split(" ")[1]));
+            }
 
         }
-
     }
 }
