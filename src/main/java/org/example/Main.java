@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws IOException, URISyntaxException {
         MovieLibrary movieLibrary = new MovieLibrary();
         Json json = new Json();
-        json.readMoviesFromJSONFile();
+        json.readMoviesFromJSONFile("movies.json");
 
         Scanner sc = new Scanner(System.in);
         System.out.println("---------------------------------- MOVIE LIBRARY ----------------------------------");

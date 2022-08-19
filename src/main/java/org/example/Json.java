@@ -12,8 +12,8 @@ import java.nio.file.Paths;
 public class Json {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    public void readMoviesFromJSONFile() throws URISyntaxException, IOException {
-        URL resource = Main.class.getClassLoader().getResource("movies.json");
+    public void readMoviesFromJSONFile(String fileName) throws URISyntaxException, IOException {
+        URL resource = Main.class.getClassLoader().getResource(fileName);
         assert resource != null;
         byte[] bytes = Files.readAllBytes(Paths.get(resource.toURI()));
         String json = new String(bytes);
