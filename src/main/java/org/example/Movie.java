@@ -3,7 +3,6 @@ package org.example;
 import java.util.ArrayList;
 
 public class Movie {
-    private String name;
     private String title;
     private int year;
 
@@ -20,14 +19,6 @@ public class Movie {
         this.director = director;
         this.genre = genre;
         this.actors = actors;
-    }
-
-    public void setName() {
-        this.name = this.title + " " + this.year;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String getTitle() {
@@ -56,6 +47,6 @@ public class Movie {
                 "Genre: " + genre + '\n' +
                 "Year: " + year + '\n' +
                 "Director: " + director + '\n' +
-                "Actors: " + actors;
+                "Actors: " + actors.toString().replace("[", "").replace("]", "");
     }
 }

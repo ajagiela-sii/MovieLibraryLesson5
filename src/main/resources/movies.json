@@ -1,51 +1,5 @@
 [
 	{
-		"title":"The Shawshank Redemption",
-		"year":"1994",
-		"genre":"DRAMA",
-		"director":{
-			"firstName":"Frank",
-			"lastName":"Darabont"
-		},
-		"actors":[
-			{
-				"firstName":"Tim",
-				"lastName":"Robbins"
-			},
-			{
-				"firstName":"Morgan",
-				"lastName":"Freeman"
-			},
-			{
-				"firstName":"Bob",
-				"lastName":"Gunton"
-			}
-		]
-	},
-	{
-		"title":"Seven",
-		"year":"1995",
-		"genre":"THRILLER",
-		"director":{
-			"firstName":"David",
-			"lastName":"Fincher"
-		},
-		"actors":[
-			{
-				"firstName":"Morgan",
-				"lastName":"Freeman"
-			},
-			{
-				"firstName":"Brad",
-				"lastName":"Pitt"
-			},
-			{
-				"firstName":"Gwyneth",
-				"lastName":"Paltrow"
-			}
-		]
-	},
-	{
 		"title":"The Siege of Jadotville",
 		"year":"2016",
 		"genre":"DRAMA",
@@ -161,6 +115,29 @@
 			{
 				"firstName":"Adam",
 				"lastName":"Brody"
+			}
+		]
+	},
+	{
+		"title":"The Shawshank Redemption",
+		"year":"1994",
+		"genre":"DRAMA",
+		"director":{
+			"firstName":"Frank",
+			"lastName":"Darabont"
+		},
+		"actors":[
+			{
+				"firstName":"Tim",
+				"lastName":"Robbins"
+			},
+			{
+				"firstName":"Morgan",
+				"lastName":"Freeman"
+			},
+			{
+				"firstName":"Bob",
+				"lastName":"Gunton"
 			}
 		]
 	},

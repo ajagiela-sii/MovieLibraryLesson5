@@ -27,7 +27,7 @@ public class MovieLibrary {
     public void printMoviesName(Set<Movie> moviesToPrinting) {
         if (!moviesToPrinting.isEmpty()) {
             for (Movie movie : moviesToPrinting) {
-                System.out.println(movie.getName());
+                System.out.println(movie.getTitle());
             }
         } else {
             System.out.println("No movies to display");

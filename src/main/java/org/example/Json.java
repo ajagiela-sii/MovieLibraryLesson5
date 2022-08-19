@@ -23,7 +23,6 @@ public class Json {
         if (node.isArray()) {
             for (JsonNode jsonNode : node) {
                 Movie movie = objectMapper.treeToValue(jsonNode, Movie.class);
-                movie.setName();
                 MovieLibrary.addMovieToLibrary(movie);
 
             }
