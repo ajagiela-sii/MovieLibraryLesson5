@@ -52,10 +52,10 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "tittle: " + title + '\n' +
-                "genre: " + genre + '\n' +
-                "year: " + year + '\n' +
-                "director: " + director + '\n' +
-                "actors: " + actors;
+        return "Tittle: " + title + '\n' +
+                "Genre: " + genre + '\n' +
+                "Year: " + year + '\n' +
+                "Director: " + director + '\n' +
+                "Actors: " + actors;
     }
 }

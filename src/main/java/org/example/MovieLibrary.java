@@ -35,7 +35,7 @@ public class MovieLibrary {
     }
 
     public Set<Movie> findMoviesWithActor(String firstName, String lastName) {
-        Predicate<Actor> actorActInMovie = actor -> (actor.getFirstName().equals(firstName) && actor.getLastName().equals(lastName));
+        Predicate<Actor> actorActInMovie = actor -> (actor.firstName().equals(firstName) && actor.lastName().equals(lastName));
         return listOfMovies.stream()
                 .filter(movie -> movie.getActors().stream().anyMatch(actorActInMovie))
                 .collect(Collectors.toSet());
