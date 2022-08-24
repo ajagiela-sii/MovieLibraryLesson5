@@ -12,7 +12,8 @@ import java.nio.file.Paths;
 public class JsonHelper {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    public void readMoviesFromJSONFile(String fileName, MovieLibrary movieLibrary) throws URISyntaxException, IOException {
+    public MovieLibrary readMoviesFromJSONFile(String fileName) throws URISyntaxException, IOException {
+        MovieLibrary movieLibrary = new MovieLibrary();
         URL resource = Main.class.getClassLoader().getResource(fileName);
         assert resource != null;
         byte[] bytes = Files.readAllBytes(Paths.get(resource.toURI()));
@@ -26,5 +27,6 @@ public class JsonHelper {
                 movieLibrary.addMovieToLibrary(movie);
             }
         }
+        return movieLibrary;
     }
 }

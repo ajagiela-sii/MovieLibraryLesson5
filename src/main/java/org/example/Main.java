@@ -6,9 +6,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException, URISyntaxException {
-        MovieLibrary movieLibrary = new MovieLibrary();
         JsonHelper json = new JsonHelper();
-        json.readMoviesFromJSONFile("movies.json", movieLibrary);
+        MovieLibrary movieLibrary = json.readMoviesFromJSONFile("movies.json");
 
         Scanner sc = new Scanner(System.in);
         System.out.println("---------------------------------- MOVIE LIBRARY ----------------------------------");
