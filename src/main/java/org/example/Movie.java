@@ -12,14 +12,6 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(String title, int date, String genre, Director director, ArrayList<Actor> actors) {
-        this.title = title;
-        this.year = date;
-        this.director = director;
-        this.genre = genre;
-        this.actors = actors;
-    }
-
     public String getTitle() {
         return title;
     }

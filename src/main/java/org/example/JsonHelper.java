@@ -9,7 +9,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class Json {
+public class JsonHelper {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     public void readMoviesFromJSONFile(String fileName) throws URISyntaxException, IOException {
