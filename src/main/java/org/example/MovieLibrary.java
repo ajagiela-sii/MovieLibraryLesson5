@@ -6,9 +6,9 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class MovieLibrary {
-    private static final ArrayList<Movie> listOfMovies = new ArrayList<>();
+    private ArrayList<Movie> listOfMovies = new ArrayList<>();
 
-    public static void addMovieToLibrary(Movie movie) {
+    public void addMovieToLibrary(Movie movie) {
         listOfMovies.add(movie);
     }
 

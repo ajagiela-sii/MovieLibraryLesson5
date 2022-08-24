@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 public class JsonHelper {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    public void readMoviesFromJSONFile(String fileName) throws URISyntaxException, IOException {
+    public void readMoviesFromJSONFile(String fileName, MovieLibrary movieLibrary) throws URISyntaxException, IOException {
         URL resource = Main.class.getClassLoader().getResource(fileName);
         assert resource != null;
         byte[] bytes = Files.readAllBytes(Paths.get(resource.toURI()));
@@ -23,7 +23,7 @@ public class JsonHelper {
         if (node.isArray()) {
             for (JsonNode jsonNode : node) {
                 Movie movie = objectMapper.treeToValue(jsonNode, Movie.class);
-                MovieLibrary.addMovieToLibrary(movie);
+                movieLibrary.addMovieToLibrary(movie);
             }
         }
     }
